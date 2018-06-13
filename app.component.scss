@@ -1,0 +1,129 @@
+@import 'src/styles/variables';
+// $spCol:$medium-light-blue;
+.custom-loading{
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        top: 0;
+        text-align: center;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        .spinner-container{
+                background-color: rgba(0,0,0,0.9);
+                clear: both;
+                display: inline-block;
+                padding: 10px;
+                position: relative;
+                top: 45%;
+                border-radius: 5px;
+        }
+        .sp {
+                width: 42px;
+                height: 42px;               
+        }
+       /* Spinner Slices */
+        .sp.sp-slices {
+                border-radius: 50%;
+                border-top: 5px rgba($medium-light-blue,1) solid;
+                border-left: 5px rgba($white,0.9) solid;
+                border-bottom: 5px rgba($white,0.9) solid;
+                border-right: 5px rgba($white,0.9) solid;
+                -webkit-animation: spSlices 1s infinite linear;
+                animation: spSlices 1s infinite linear;
+        }
+        @-webkit-keyframes spSlices {
+                0% {
+                        border-top: 5px rgba($medium-light-blue,1) solid;
+                        border-right: 5px rgba($white,0.9) solid;
+                        border-bottom: 5px rgba($white,0.9) solid;
+                        border-left: 5px rgba($white,0.9) solid;
+                }
+                25% {
+                        border-top: 5px rgba($white,0.9) solid;
+                        border-right: 5px rgba($medium-light-blue,1) solid;
+                        border-bottom: 5px rgba($white,0.9) solid;
+                        border-left: 5px rgba($white,0.9) solid;
+                }
+                50% {
+                        border-top: 5px rgba($white,0.9) solid;
+                        border-right: 5px rgba($white,0.9) solid;
+                        border-bottom: 5px rgba($medium-light-blue,1) solid;
+                        border-left: 5px rgba($white,0.9) solid;
+                }
+                75% {
+                        border-top: 5px rgba($white,0.9) solid;
+                        border-right: 5px rgba($white,0.9) solid;
+                        border-bottom: 5px rgba($white,0.9) solid;
+                        border-left: 5px rgba($medium-light-blue,1) solid;
+                }
+                100% {
+                        border-top: 5px rgba($medium-light-blue,1) solid;
+                        border-right: 5px rgba($white,0.9) solid;
+                        border-bottom: 5px rgba($white,0.9) solid;
+                        border-left: 5px rgba($white,0.9) solid;
+                }
+        }
+        @keyframes spSlices {
+                0% {
+                        border-top: 5px rgba($medium-light-blue,1) solid;
+                        border-right: 5px rgba($white,0.9) solid;
+                        border-bottom: 5px rgba($white,0.9) solid;
+                        border-left: 5px rgba($white,0.9) solid;
+                }
+                25% {
+                        border-top: 5px rgba($white,0.9) solid;
+                        border-right: 5px rgba($medium-light-blue,1) solid;
+                        border-bottom: 5px rgba($white,0.9) solid;
+                        border-left: 5px rgba($white,0.9) solid;
+                }
+                50% {
+                        border-top: 5px rgba($white,0.9) solid;
+                        border-right: 5px rgba($white,0.9) solid;
+                        border-bottom: 5px rgba($medium-light-blue,1) solid;
+                        border-left: 5px rgba($white,0.9) solid;
+                }
+                75% {
+                        border-top: 5px rgba($white,0.9) solid;
+                        border-right: 5px rgba($white,0.9) solid;
+                        border-bottom: 5px rgba($white,0.9) solid;
+                        border-left: 5px rgba($medium-light-blue,1) solid;
+                }
+                100% {
+                        border-top: 5px rgba($medium-light-blue,1) solid;
+                        border-right: 5px rgba($white,0.9) solid;
+                        border-bottom: 5px rgba($white,0.9) solid;
+                        border-left: 5px rgba($white,0.9) solid;
+                }
+        }
+}
+.timeout-loader{
+        position: fixed;
+        z-index: 9999;
+        background-color: rgba($black, 0.8);
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        .message{
+             color: $black;
+             font-size: 28px;
+             font-family: semibold;
+             text-align: center;
+             margin: 25vh auto 0;
+             width: 450px;
+             background: $white;
+             padding: 20px;
+                small{
+                        font-size: 16px;
+                        display: block;
+
+                }
+                .btn-custom{
+                        margin-top: 15px;
+                        font-size: 14px;
+                }
+        }
+
+}
